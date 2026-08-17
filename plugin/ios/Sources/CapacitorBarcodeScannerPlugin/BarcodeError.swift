@@ -1,12 +1,12 @@
 import Foundation
 
-private struct OSBarcodeErrorLabels {
+private struct BarcodeErrorLabels {
     static let code = "code"
     static let codeFormat = "OS-PLUG-BARC-"
     static let message = "message"
 }
 
-enum OSBarcodeError: Int, CustomNSError, LocalizedError {
+enum BarcodeError: Int, CustomNSError, LocalizedError {
     case scanningError = 4
     case scanningCancelled = 6
     case cameraAccessDenied = 7
@@ -24,7 +24,7 @@ enum OSBarcodeError: Int, CustomNSError, LocalizedError {
     }
 
     var errorCode: String {
-        return "\(OSBarcodeErrorLabels.codeFormat)\(String(format: "%04d", self.rawValue))"
+        return "\(BarcodeErrorLabels.codeFormat)\(String(format: "%04d", self.rawValue))"
     }
 
 }

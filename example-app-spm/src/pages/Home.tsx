@@ -22,7 +22,7 @@ import {
   CapacitorBarcodeScannerCameraDirection,
   CapacitorBarcodeScannerScanOrientation,
   CapacitorBarcodeScannerTypeHint,
-} from '@capacitor/barcode-scanner';
+} from '@lyfter/barcode-scanner';
 import { Capacitor } from '@capacitor/core';
 
 const Home: React.FC = () => {

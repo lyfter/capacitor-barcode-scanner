@@ -1,6 +1,6 @@
 {
-  "name": "@capacitor/barcode-scanner",
-  "version": "3.1.0",
+  "name": "@lyfter/barcode-scanner",
+  "version": "3.1.0-lyfter.1",
   "description": "Capacitor plugin using Outsystems Barcode libs",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
@@ -20,10 +20,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ionic-team/capacitor-barcode-scanner.git"
+    "url": "git+https://github.com/lyfter/capacitor-barcode-scanner.git"
   },
   "bugs": {
-    "url": "https://github.com/ionic-team/capacitor-barcode-scanner/issues"
+    "url": "https://github.com/lyfter/capacitor-barcode-scanner/issues"
   },
   "keywords": [
     "capacitor",
@@ -31,7 +31,7 @@
     "native"
   ],
   "publishConfig": {
-    "access": "public"
+     "registry": "https://npm.lyfter.nl"
   },
   "scripts": {
     "verify": "npm run verify:ios && npm run verify:android && npm run verify:web",

@@ -1,11 +1,11 @@
-# @capacitor/barcode-scanner
+# @lyfter/barcode-scanner
 
 Capacitor plugin using Outsystems Barcode libs
 
 ## Install
 
 ```bash
-npm install @capacitor/barcode-scanner
+npm install @lyfter/barcode-scanner
 npx cap sync
 ```
 
@@ -105,7 +105,7 @@ to represent the hint for the type of barcode to be scanned.
 
 Defines the options for configuring a barcode scan.
 
-<code>{ hint?: <a href="#capacitorbarcodescannertypehint">CapacitorBarcodeScannerTypeHint</a>; hints?: CapacitorBarcodeScannerTypeHint[]; scanInstructions?: string; scanButton?: boolean; scanText?: string; cameraDirection?: <a href="#capacitorbarcodescannercameradirection">CapacitorBarcodeScannerCameraDirection</a>; scanOrientation?: <a href="#capacitorbarcodescannerscanorientation">CapacitorBarcodeScannerScanOrientation</a>; android?: { scanningLibrary?: <a href="#capacitorbarcodescannerandroidscanninglibrary">CapacitorBarcodeScannerAndroidScanningLibrary</a>; }; web?: { showCameraSelection?: boolean; scannerFPS?: number; }; }</code>
+<code>{ hint?: <a href="#capacitorbarcodescannertypehint">CapacitorBarcodeScannerTypeHint</a>; hints?: CapacitorBarcodeScannerTypeHint[]; scanInstructions?: string; scanButton?: boolean; scanText?: string; cameraDirection?: <a href="#capacitorbarcodescannercameradirection">CapacitorBarcodeScannerCameraDirection</a>; scanOrientation?: <a href="#capacitorbarcodescannerscanorientation">CapacitorBarcodeScannerScanOrientation</a>; /** * Accessibility label (alternative text) read by screen readers for the cancel button. * When omitted, no accessibility label is set. Has no effect on web. */ cancelButtonAccessibilityLabel?: string; /** * Accessibility label (alternative text) read by screen readers for the torch button when the torch is on. * When omitted, no accessibility label is set. Has no effect on web. */ torchButtonOnAccessibilityLabel?: string; /** * Accessibility label (alternative text) read by screen readers for the torch button when the torch is off. * When omitted, no accessibility label is set. Has no effect on web. */ torchButtonOffAccessibilityLabel?: string; android?: { scanningLibrary?: <a href="#capacitorbarcodescannerandroidscanninglibrary">CapacitorBarcodeScannerAndroidScanningLibrary</a>; }; web?: { showCameraSelection?: boolean; scannerFPS?: number; }; }</code>
 
 
 ### Enums
