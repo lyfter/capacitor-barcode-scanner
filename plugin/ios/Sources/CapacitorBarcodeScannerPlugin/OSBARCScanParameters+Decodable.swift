@@ -10,6 +10,7 @@ extension OSBARCScanParameters: Decodable {
         case cameraDirection
         case scanOrientation
         case hint
+        case hints
         case cancelButtonAccessibilityLabel
         case torchButtonOnAccessibilityLabel
         case torchButtonOffAccessibilityLabel
@@ -32,8 +33,11 @@ extension OSBARCScanParameters: Decodable {
         let scanOrientationInt = try container.decode(Int.self, forKey: .scanOrientation)
         let scanOrientation = OSBARCOrientationModel.map(value: scanOrientationInt)
 
-        let hintInt = try container.decode(Int.self, forKey: .hint)
-        let hint = OSBARCScannerHint(rawValue: hintInt)
+        let hintInt = try container.decodeIfPresent(Int.self, forKey: .hint)
+        let hint = hintInt.flatMap { OSBARCScannerHint(rawValue: $0) }
+
+        let hintInts = try container.decodeIfPresent([Int].self, forKey: .hints)
+        let hints = hintInts?.compactMap { OSBARCScannerHint(rawValue: $0) }
 
         let cancelButtonAccessibilityLabel = try container.decodeIfPresent(String.self, forKey: .cancelButtonAccessibilityLabel)
         let torchButtonOnAccessibilityLabel = try container.decodeIfPresent(String.self, forKey: .torchButtonOnAccessibilityLabel)
@@ -45,6 +49,7 @@ extension OSBARCScanParameters: Decodable {
             cameraDirection: cameraDirection,
             scanOrientation: scanOrientation,
             hint: hint,
+            hints: hints
             cancelButtonAccessibilityLabel: cancelButtonAccessibilityLabel,
             torchButtonOnAccessibilityLabel: torchButtonOnAccessibilityLabel,
             torchButtonOffAccessibilityLabel: torchButtonOffAccessibilityLabel
